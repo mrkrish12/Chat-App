@@ -1,0 +1,47 @@
+package com.krishna.chatapp.views;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+
+public class ClientChatAScreen extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		
+					ClientChatAScreen frame = new ClientChatAScreen();
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ClientChatAScreen() {
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 584, 402);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 6, 560, 345);
+		contentPane.add(scrollPane);
+		
+		JTextArea textarea = new JTextArea();
+		textarea.setBounds(10, 10, 540, 320);
+		contentPane.add(textarea);
+		
+		
+		setVisible(true);
+	}
+}

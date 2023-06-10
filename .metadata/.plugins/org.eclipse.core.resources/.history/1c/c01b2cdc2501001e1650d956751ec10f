@@ -1,0 +1,25 @@
+package com.krishna.chatapp.network;
+// thread == worker here
+//public class ServerWorker implements Runnable{
+
+public class ServerWorker extends Thread{
+	@Override
+	public void run() {
+		// task to be done
+		for(int i=0;i<5;i++)
+		{
+			System.out.println(i+" "+Thread.currentThread());
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		ServerWorker job = new ServerWorker();
+		job.start();
+		for(int j=0;j<=5;j++)
+		{
+			System.out.println(j+" "+ Thread.currentThread());
+		}
+	}
+
+}

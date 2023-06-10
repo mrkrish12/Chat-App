@@ -1,0 +1,6 @@
+package com.krishna.chatapp.network;
+// thread == worker here
+public class ServerWorker implements Runnable{
+	
+
+}

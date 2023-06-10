@@ -1,0 +1,38 @@
+package com.krishna.chatapp.dao;
+
+import java.sql.Connection;
+
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.krishna.chatapp.dto.Userdto;
+import com.krishna.chatapp.utils.Encryption;
+
+// user pa crud operation ka liya
+public class Userdao {
+
+	public boolean isLogin(Userdto userdto) {
+		Connection con = null;
+		Statement stmt = null;
+	}
+	
+	
+	public int add(Userdto userdto) throws ClassNotFoundException, SQLException,Exception{
+		System.out.println("rec " +userdto.getUserid()+" "+userdto.getPassword());
+		Connection connection = null;
+		Statement stmt = null;
+		try {
+		connection = Commondao.createConnection();
+		stmt = connection.createStatement();
+	int record =stmt.executeUpdate("insert into users(userid,password) values('"+userdto.getUserid()+"' ,'"+Encryption.passwordEncrypt(new String(userdto.getPassword()))+"')");
+	return record;
+		}
+		finally {
+			if(stmt!=null)
+			{
+		stmt.close();}
+			if(connection!=null)
+			{
+		connection.close();}}
+	}
+}

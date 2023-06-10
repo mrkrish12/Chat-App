@@ -1,0 +1,14 @@
+package com.krishna.chatapp.utils;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+public interface Encryption {
+ 
+public static String passwordEncrypt(String plainPasswprd) throws NoSuchAlgorithmException
+	{
+		String encryptedPassword = null;
+	MessageDigest messageDigesr	= MessageDigest.getInstance("MD5");
+		return encryptedPassword;
+	}
+}

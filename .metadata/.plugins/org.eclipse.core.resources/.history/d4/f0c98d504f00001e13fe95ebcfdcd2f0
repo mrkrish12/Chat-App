@@ -1,0 +1,10 @@
+package com.krishna.chatapp.utils;
+
+public class Encryption {
+ 
+	String passwordEncrypt(String plainPasswprd)
+	{
+		String encryptedPassword = null;
+		return encryptedPassword;
+	}
+}

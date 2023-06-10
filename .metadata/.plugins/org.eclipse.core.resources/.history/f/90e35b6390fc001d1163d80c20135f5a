@@ -1,0 +1,16 @@
+package com.krishna.chatapp.dao;
+
+import java.sql.Connection;
+
+import com.krishna.chatapp.dto.Userdto;
+
+// user pa crud operation ka liya
+public class Userdao {
+
+	public int add(Userdto userdto){
+		System.out.println("rec " +userdto.getUserid()+" "+userdto.getPassword());
+		Connection connection = null;
+		
+		return 0;
+	}
+}

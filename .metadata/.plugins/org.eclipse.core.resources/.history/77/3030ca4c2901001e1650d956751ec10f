@@ -1,0 +1,29 @@
+package com.krishna.chatapp.network;
+// thread == worker here
+//public class ServerWorker implements Runnable{
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.Socket;
+
+public class ServerWorker extends Thread{
+	 private Socket clientsocket;
+	 private InputStream in;
+	 private OutputStream out;
+	 public ServerWorker(Socket clientsocket) throws IOException {
+		this.clientsocket = clientsocket;
+		in=clientsocket.getInputStream();
+		out = clientsocket.getOutputStream();
+	}
+	@Override
+	public void run() {
+		// task to be done
+		//read data from client and broadcast data to all
+		BufferedReader br = new BufferedReader(new InputStreamReader(in));
+		
+	}
+
+}

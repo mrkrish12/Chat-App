@@ -1,0 +1,14 @@
+package com.krishna.chatapp.network;
+// thread == worker here
+//public class ServerWorker implements Runnable{
+
+public class ServerWorker extends Thread{
+	 private Socket clientsocket;
+	@Override
+	public void run() {
+		// task to be done
+		
+		
+	}
+
+}

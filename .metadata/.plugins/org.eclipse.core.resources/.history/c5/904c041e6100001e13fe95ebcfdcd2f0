@@ -1,0 +1,19 @@
+package com.krishna.chatapp.network;
+
+import java.net.ServerSocket;
+
+import com.krishna.chatapp.utils.ConfigReader;
+
+public class Server {
+
+	ServerSocket serverscoket;
+	public Server() {
+		int PORT = ConfigReader.getValue(PORTNO);
+		 serverscoket = new ServerSocket();
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

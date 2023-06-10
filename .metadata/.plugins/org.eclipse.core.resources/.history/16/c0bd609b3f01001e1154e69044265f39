@@ -1,0 +1,68 @@
+package com.krishna.chatapp.views;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class ClientChatAScreen extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		
+					ClientChatAScreen frame = new ClientChatAScreen();
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ClientChatAScreen() {
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 633, 454);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 6, 560, 345);
+		contentPane.add(scrollPane);
+		
+		JTextArea textarea = new JTextArea();
+		textarea.setFont(new Font("Arial Black", Font.PLAIN, 16));
+		textarea.setBounds(10, 10, 540, 320);
+		scrollPane.setViewportView(textarea);
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Arial", Font.PLAIN, 16));
+		textField.setBounds(10, 373, 471, 31);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		JButton sendit = new JButton("Send_Message");
+		sendit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		sendit.setBounds(491, 374, 113, 32);
+		contentPane.add(sendit);
+		
+		
+		setVisible(true);
+	}
+}

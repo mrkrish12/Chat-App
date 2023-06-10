@@ -1,0 +1,21 @@
+package com.krishna.chatapp.utils;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+public class Encryption {
+ 
+public static String passwordEncrypt(String plainPasswprd) throws NoSuchAlgorithmException
+	{
+		String encryptedPassword = null;
+	MessageDigest messageDigesr	= MessageDigest.getInstance("MD5");
+	messageDigesr.update(plainPasswprd.getBytes());
+	byte [] encrypt = messageDigesr.digest();
+	encryptedPassword = new String(encrypt);
+	System.out.println("Encrypted pass" +encryptedPassword);
+		return encryptedPassword;
+	}
+public static void main(String[] args) throws NoSuchAlgorithmException {
+	System.out.println(passwordEncrypt("amit"));
+}
+}

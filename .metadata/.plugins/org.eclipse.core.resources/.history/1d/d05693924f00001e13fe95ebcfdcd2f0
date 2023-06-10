@@ -1,0 +1,13 @@
+package com.krishna.chatapp.utils;
+
+import java.security.MessageDigest;
+
+public interface Encryption {
+ 
+public static String passwordEncrypt(String plainPasswprd)
+	{
+		String encryptedPassword = null;
+	MessageDigest messageDigesr	= MessageDigest.getInstance("MD5");
+		return encryptedPassword;
+	}
+}

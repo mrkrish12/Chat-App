@@ -1,0 +1,18 @@
+package com.krishna.chatapp.network;
+
+import java.net.Socket;
+
+import com.krishna.chatapp.utils.ConfigReader;
+
+public class Client {
+	Socket socket;
+	public Client() {
+		socket = new Socket(ConfigReader.getValue("SERVER_IP"));
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.krishna.chatapp.network;
+
+import java.io.InputStream;
+
+public class ClientWorker extends Thread {
+	private InputStream in;
+	public ClientWorker(InputStream in) {
+		this.in=in;
+	}
+	
+	@Override
+	public void run() {
+		
+	}
+
+}

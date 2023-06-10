@@ -1,0 +1,16 @@
+package com.krishna.chatapp.network;
+// thread == worker here
+public class ServerWorker implements Runnable{
+
+	@Override
+	public void run() {
+		// task to be done
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		ServerWorker jpb = new ServerWorker();
+	}
+
+}
